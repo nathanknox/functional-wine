@@ -6,6 +6,7 @@ import zio.schema.Schema
 import zio.schema.DeriveSchema
 import zio.schema.DeriveGen
 import zio.test.{Gen, Sized}
+import zio.ZIOAppDefault
 
 sealed trait WineInfo
 object WineInfo {

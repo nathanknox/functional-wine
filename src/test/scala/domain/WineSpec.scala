@@ -39,6 +39,13 @@ object WineSpec extends ZIOSpecDefault {
         assertTrue(true)
       }
     } @@ ignore, // @@ samples(5) @@ timeout(Duration.fromSeconds(5)) @@ timed,
+    test("can debug a custom Generator") {
+      val program = for {
+        _ <- Bottle.gen.runCollectN(2).debug
+      } yield assertTrue(true)
+
+      program
+    } @@ timed,
     test("exampleTest") {
       val program = for {
         result <- ZIO.fail(new RuntimeException("NOT YET IMPLEMENTED"))
