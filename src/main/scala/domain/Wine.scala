@@ -41,7 +41,7 @@ object BottleDetails {
   case object BottlePlaceholder extends BottleDetails
 }
 
-final case class ShelfDetails(capapcity: Int, description: Option[ShelfDescription] = None)
+final case class ShelfDetails(capacity: Int, description: Option[ShelfDescription] = None)
 object ShelfDetails {
   implicit val schema: Schema[ShelfDetails] = DeriveSchema.gen
 }

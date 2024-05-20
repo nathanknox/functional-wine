@@ -16,7 +16,7 @@ object WineSpec extends ZIOSpecDefault {
   override def spec = suite("WineSpec")(
     test("a Shelf can hold a Bottle") {
       val bottle: Bottle = Bottle(BottleDetails.BottlePlaceholder)
-      val shelf: Shelf   = Shelf(Chunk(bottle), ShelfDetails(capapcity = 1))
+      val shelf: Shelf   = Shelf(Chunk(bottle), ShelfDetails(capacity = 1))
       assertTrue(true)
     } @@ timed,
     test("can Gen some Ints") {
